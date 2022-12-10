@@ -6,6 +6,8 @@ import vuetify from 'vite-plugin-vuetify'
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
+const PORT = process.env.port || 80
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -31,6 +33,6 @@ export default defineConfig({
     ],
   },
   server: {
-    port: 3000,
+    port: process.env.port || 3000,
   },
 })
